@@ -12,6 +12,17 @@
   font-family: "Cormorant Garamond", serif;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -31,7 +42,7 @@ a {
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 10;
+  z-index: 100;
   transition:
     background 0.3s ease,
     box-shadow 0.3s ease;
@@ -53,8 +64,8 @@ a {
   text-transform: uppercase;
   color: #e1ce6b;
   font-weight: 400;
+  font-size: 20px;
   letter-spacing: 1px;
-  /* animate in */
   opacity: 0;
   animation: fadeDown 0.8s ease 0.2s forwards;
 }
@@ -67,16 +78,42 @@ a {
   display: flex;
   align-items: center;
   gap: 30px;
-  /* animate in */
   opacity: 0;
   animation: fadeDown 0.8s ease 0.4s forwards;
 }
 
+.nav__item a {
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav__item a:hover {
+  color: #e1ce6b;
+}
+
 .btn {
-  padding: 0;
+  padding: 12px 28px;
   border: none;
   background: transparent;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background: #e1ce6b;
+  color: #2c5845;
+  opacity: 0;
+  animation: fadeDown 0.8s ease 0.6s forwards;
+}
+
+.btn--primary:hover {
+  background: #fff;
+  transform: translateY(-2px);
 }
 
 .burger-btn {
@@ -86,7 +123,7 @@ a {
   color: #e1ce6b;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .nav,
   .btn__book {
     display: none;
@@ -128,17 +165,18 @@ a {
 }
 
 .hero__title {
-  font-size: 48px;
+  font-size: 72px;
+  font-weight: 400;
   margin-bottom: 16px;
-  /* animate in */
   opacity: 0;
   animation: fadeUp 1s ease 0.5s forwards;
 }
 
 .hero__text {
-  font-size: 18px;
+  font-size: 20px;
   color: #d6d2c8;
-  /* animate in */
+  max-width: 600px;
+  line-height: 1.6;
   opacity: 0;
   animation: fadeUp 1s ease 0.7s forwards;
 }
@@ -151,17 +189,16 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 32px;
-  /* animate in */
+  margin-top: 40px;
   opacity: 0;
   animation: fadeUp 1s ease 0.9s forwards;
 }
 
 .hero__action-block-link {
   display: inline-block;
-  padding: 14px 36px;
-  font-size: 0.75rem;
-  font-weight: 800;
+  padding: 16px 40px;
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -169,7 +206,7 @@ a {
 
 .hero__action-block-link:first-child {
   background: #fff;
-  color: #000;
+  color: #2c5845;
   border: 2px solid #fff;
 }
 
@@ -196,7 +233,6 @@ a {
   gap: 12px;
   list-style: none;
   margin-top: 40px;
-  /* animate in */
   opacity: 0;
   animation: fadeUp 1s ease 1.1s forwards;
 }
@@ -220,8 +256,109 @@ a {
   transform: translateY(-3px);
 }
 
-.socials__link svg path {
-  fill: #fff;
+.section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-header svg {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #e6b832, #d4c06a, #a6894d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.gold-line {
+  width: 80px;
+  height: 1px;
+  margin: 0 auto 8px;
+  background: linear-gradient(90deg, transparent, #d4c06a, transparent);
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #9a9585;
+}
+
+/* ── Cards ── */
+.card {
+  background: linear-gradient(145deg, #1a3a2c, #132a1f);
+  border: 1px solid #24432f;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card-header svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #e6b832, #d4c06a, #a6894d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Price rows ── */
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 0;
+}
+
+.price-row + .price-row {
+  border-top: none;
+}
+
+.service-name {
+  font-size: 14px;
+  color: #e3e0d8e6;
+}
+
+.dots {
+  flex: 1;
+  min-width: 16px;
+  border-bottom: 1px dotted #24432f;
+  transform: translateY(-4px);
+}
+
+.service-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d4c06a;
+  white-space: nowrap;
+}
+
+/* ── Gold icon color ── */
+.icon-gold {
+  color: #d4c06a;
+  fill: none;
+  stroke: #d4c06a;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ═══════════════════════════════
@@ -230,7 +367,7 @@ a {
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -241,7 +378,7 @@ a {
 @keyframes fadeDown {
   from {
     opacity: 0;
-    transform: translateY(-16px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;

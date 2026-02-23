@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,14 @@
           <a class="header__brand-name" href="#">presidente barbershop</a>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="#">Домой</a></li>
-              <li class="nav__item"><a href="#barbers">Наша Команда</a></li>
+              <li class="nav__item"><a href="#home">Домой</a></li>
+              <li class="nav__item"><a href="#location">Филиалы</a></li>
               <li class="nav__item"><a href="#services">Услуги</a></li>
+              <li class="nav__item"><a href="#barbers">Наша Команда</a></li>
             </ul>
           </nav>
           <button class="btn btn--primary btn__book" type="button">
-            Book Now
+            Записаться
           </button>
           <button class="btn burger-btn" type="button">
             <svg
@@ -38,8 +39,10 @@
         </div>
       </div>
     </header>
+
     <main>
-      <section class="hero">
+      <!-- HERO SECTION -->
+      <section class="hero" id="home">
         <video
           src="./assets/video/Har dam olish kuni — jonli pianino,.mp4"
           class="hero__video"
@@ -57,7 +60,9 @@
             </p>
 
             <div class="hero__action-block">
-              <a href="#book" class="hero__action-block-link">Забронировать</a>
+              <a href="#location" class="hero__action-block-link"
+                >Забронировать</a
+              >
               <a href="#barbers" class="hero__action-block-link"
                 >Наши барберы</a
               >
@@ -68,49 +73,32 @@
                 <a
                   class="socials__link"
                   href="https://www.instagram.com/presidente_barbershop/"
+                  target="_blank"
                 >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"
-                      fill="black"
+                      fill="white"
                     />
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
-                <a class="socials__link" href="">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                <a class="socials__link" href="tel:+998901234567">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
-                      fill="black"
+                      fill="white"
                     />
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link" href="#location">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M12 11.5C11.337 11.5 10.7011 11.2366 10.2322 10.7678C9.76339 10.2989 9.5 9.66304 9.5 9C9.5 8.33696 9.76339 7.70107 10.2322 7.23223C10.7011 6.76339 11.337 6.5 12 6.5C12.663 6.5 13.2989 6.76339 13.7678 7.23223C14.2366 7.70107 14.5 8.33696 14.5 9C14.5 9.3283 14.4353 9.65339 14.3097 9.95671C14.1841 10.26 13.9999 10.5356 13.7678 10.7678C13.5356 10.9999 13.26 11.1841 12.9567 11.3097C12.6534 11.4353 12.3283 11.5 12 11.5ZM12 2C10.1435 2 8.36301 2.7375 7.05025 4.05025C5.7375 5.36301 5 7.14348 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 7.14348 18.2625 5.36301 16.9497 4.05025C15.637 2.7375 13.8565 2 12 2Z"
-                      fill="black"
+                      fill="white"
                     />
                   </svg>
                 </a>
@@ -119,14 +107,166 @@
           </div>
         </div>
       </section>
-      <section class="about">
+
+      <section class="services">
         <div class="container">
-          <div class="about__wrapper">
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <div class="services__wrapper">
+            <!-- Header -->
+            <div class="section-header">
+              <svg class="icon-gold" viewBox="0 0 24 24">
+                <circle cx="6" cy="6" r="3" />
+                <path d="M8.12 8.12 12 12" />
+                <path d="M20 4 8.12 15.88" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M14.8 14.8 20 20" />
+              </svg>
+              <h2 class="section-title">Наши Услуги</h2>
+              <div class="gold-line"></div>
+              <p class="section-subtitle">Все цены указаны в сумах</p>
+            </div>
+
+            <!-- Стрижка волос -->
+            <div class="card">
+              <div class="card-header">
+                <svg class="icon-gold" viewBox="0 0 24 24">
+                  <path
+                    d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"
+                  />
+                </svg>
+                <h3 class="card-title">Стрижка волос</h3>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Удлинённый дизайн</span
+                ><span class="dots"></span
+                ><span class="service-price">300 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Мужская стрижка</span
+                ><span class="dots"></span
+                ><span class="service-price">250 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Стрижка под машинку</span
+                ><span class="dots"></span
+                ><span class="service-price">150 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Детская (4–7 лет)</span
+                ><span class="dots"></span
+                ><span class="service-price">150 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Окантовка</span
+                ><span class="dots"></span
+                ><span class="service-price">100 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Укладка</span
+                ><span class="dots"></span
+                ><span class="service-price">100 000</span>
+              </div>
+            </div>
+
+            <!-- Борода -->
+            <div class="card">
+              <div class="card-header">
+                <svg class="icon-gold" viewBox="0 0 24 24">
+                  <path
+                    d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"
+                  />
+                </svg>
+                <h3 class="card-title">Борода</h3>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Моделирование бороды</span
+                ><span class="dots"></span
+                ><span class="service-price">150 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Стрижка бороды</span
+                ><span class="dots"></span
+                ><span class="service-price">100 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Королевское бритьё</span
+                ><span class="dots"></span
+                ><span class="service-price">200 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Камуфляж бороды</span
+                ><span class="dots"></span
+                ><span class="service-price">от 100 000</span>
+              </div>
+            </div>
+
+            <!-- Комплексные услуги -->
+            <div class="card">
+              <div class="card-header">
+                <svg class="icon-gold" viewBox="0 0 24 24">
+                  <path
+                    d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"
+                  />
+                </svg>
+                <h3 class="card-title">Комплексные услуги</h3>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Стрижка + Моделирование бороды</span
+                ><span class="dots"></span
+                ><span class="service-price">350 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Стрижка + Стрижка бороды</span
+                ><span class="dots"></span
+                ><span class="service-price">300 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Стрижка + Королевское бритьё</span
+                ><span class="dots"></span
+                ><span class="service-price">350 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Окантовка + Укладка</span
+                ><span class="dots"></span
+                ><span class="service-price">150 000</span>
+              </div>
+            </div>
+
+            <!-- Дополнительно -->
+            <div class="card">
+              <div class="card-header">
+                <svg class="icon-gold" viewBox="0 0 24 24">
+                  <path
+                    d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"
+                  />
+                </svg>
+                <h3 class="card-title">Дополнительно</h3>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Тонировка головы</span
+                ><span class="dots"></span
+                ><span class="service-price">от 150 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Бритьё головы</span
+                ><span class="dots"></span
+                ><span class="service-price">200 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Чистка лица (скраб+глина)</span
+                ><span class="dots"></span
+                ><span class="service-price">от 100 000</span>
+              </div>
+              <div class="price-row">
+                <span class="service-name">Удаление воском</span
+                ><span class="dots"></span
+                ><span class="service-price">от 50 000</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="./script.js"></script>
   </body>
-  <script src="./script.js"></script>
 </html>
