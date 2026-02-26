@@ -49,7 +49,7 @@ a {
 }
 
 .header--scrolled {
-  background-color: #2c5845;
+  background-color: #132a1f;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -268,7 +268,6 @@ a {
 }
 
 .section-title {
-  font-family: "Playfair Display", serif;
   font-size: 32px;
   font-weight: 700;
   background: linear-gradient(135deg, #e6b832, #d4c06a, #a6894d);
@@ -289,13 +288,36 @@ a {
   color: #9a9585;
 }
 
+/* ── Services ── */
+
+.services {
+  background-color: #132a1f;
+}
+
+.section__wrapper {
+  padding: 50px 0;
+}
+
 /* ── Cards ── */
-.card {
+.card,
+.card-location {
   background: linear-gradient(145deg, #1a3a2c, #132a1f);
   border: 1px solid #24432f;
   border-radius: 4px;
   padding: 24px;
   margin-bottom: 16px;
+}
+
+.card-location {
+  width: 100%;
+  min-height: 60px;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 16px;
 }
 
 .card-header {
@@ -312,12 +334,43 @@ a {
 }
 
 .card-title {
-  font-family: "Playfair Display", serif;
   font-size: 18px;
   font-weight: 700;
   background: linear-gradient(135deg, #e6b832, #d4c06a, #a6894d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.card-title span {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+}
+
+/* Location */
+
+.location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.location-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.location-header svg {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.card-icon {
+  color: #e1ce6b;
+}
+
+.booking {
+  background-color: #132a1f;
 }
 
 /* ── Price rows ── */
